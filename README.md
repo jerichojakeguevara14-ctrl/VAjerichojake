@@ -1,4 +1,2 @@
 # VAjerichojake
-Virtual E-commerce Assistant proficient in managing online stores and engaging with customers. 
-Capable of posting products, updating inventory status, and completing orders efficiently, all while 
-extending empathic support via chat, email, and social media platforms
+An IT graduate from the Polytechnic University of the Philippines with strong creative and learning skills. I have experience in customer service, admin support, e-commerce operations, graphic design, and website management and drop shipping
