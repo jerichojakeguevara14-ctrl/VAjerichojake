@@ -1,179 +1,69 @@
-/* ===== Global Styles ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-:root {
-  --primary-color: #222;
-  --accent-color: #0078ff;
-  --bg-color: #f9f9f9;
-  --text-color: #333;
-  --light-text: #777;
-  --border-radius: 8px;
-  --transition: 0.3s ease;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* ===== Header ===== */
-header {
-  background: linear-gradient(135deg, var(--primary-color), #444);
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-header h1 {
-  font-size: 3em;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-header p {
-  font-size: 1.3em;
-  color: #ccc;
-  margin-top: 10px;
-}
-
-/* ===== About Section ===== */
-.about {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.about h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-}
-
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1em;
-  color: var(--light-text);
-}
-
-/* ===== Contact Section ===== */
-.contact {
+  margin: 0;
+  font-family: Arial, sans-serif;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
 }
 
-.contact-form,
-.contact-info {
-  flex: 1 1 45%;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform var(--transition);
+.sidebar {
+  width: 250px;
+  background: #222;
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  padding: 20px;
 }
 
-.contact-form:hover,
-.contact-info:hover {
-  transform: translateY(-5px);
-}
-
-.contact-form h3,
-.contact-info h3 {
-  font-size: 1.6em;
+.sidebar h2 {
   margin-bottom: 20px;
-  color: var(--primary-color);
 }
 
-/* ===== Form Elements ===== */
-label {
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
   display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: var(--text-color);
+  background: #ff4081;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-input,
-textarea {
+.content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+form input, form textarea, form button {
+  display: block;
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: var(--border-radius);
-  font-size: 1em;
-  transition: border-color var(--transition);
+  margin: 10px 0;
+  padding: 10px;
 }
-
-input:focus,
-textarea:focus {
-  border-color: var(--accent-color);
-  outline: none;
-}
-
-button {
-  background-color: var(--accent-color);
+form button {
+  background: #ff4081;
   color: #fff;
   border: none;
-  padding: 12px 25px;
-  font-size: 1em;
-  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background-color var(--transition);
-}
-
-button:hover {
-  background-color: #005fcc;
-}
-
-/* ===== Contact Info ===== */
-.contact-info p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  color: var(--light-text);
-}
-
-.contact-info a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition);
-}
-
-.contact-info a:hover {
-  color: #005fcc;
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 30px;
-  background-color: var(--primary-color);
-  color: #fff;
-  font-size: 1em;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .contact {
-    flex-direction: column;
-  }
-
-  header h1 {
-    font-size: 2.2em;
-  }
-
-  .about h2 {
-    font-size: 1.8em;
-  }
 }
