@@ -1,72 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jericho Jake Guevara - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jericho Jake Guevara</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background: linear-gradient(135deg, #6d28d9, #ffffff);
+  color:#0f172a;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav a{
+  margin:0 10px;
+  text-decoration:none;
+  color:#0f172a;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:#6d28d9;
+  left:0;
+  bottom:-4px;
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:100px 40px;
+}
+
+.hero img{
+  width:260px;
+  border-radius:50%;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hero h1{
+  font-size:2.8rem;
+}
+
+.typing{
+  font-size:1.2rem;
+  color:#6d28d9;
+  margin-top:10px;
+}
+
+/* SECTION */
+.section{
+  padding:80px 40px;
+}
+
+h2{
+  margin-bottom:20px;
+  color:#6d28d9;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#ffffff;
+  padding:20px;
+  border-radius:12px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:#6d28d9;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+/* DOTS */
+.dots{
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
+}
+.dot{
+  width:10px;height:10px;
+  margin:5px;
+  background:#aaa;
+  border-radius:50%;
+}
+.dot.active{background:#6d28d9;}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+.social a{
+  margin:0 10px;
+  color:#a78bfa;
+  text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero{flex-direction:column;text-align:center;}
+}
+</style>
 </head>
+
 <body>
-  <!-- Sidebar Navigation -->
-  <nav class="sidebar">
-    <h2>Jericho Jake Guevara</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="buttons">
-      <a href="EC_VA JJG.pdf" download class="btn">Download Resume</a>
-      <a href="#contact" class="btn">Work With Me</a>
-    </div>
-  </nav>
 
-  <!-- Main Content -->
-  <div class="content">
-    <section id="about">
-      <h1>About Me</h1>
-      <p>A Virtual E-commerce Assistant proficient in managing online stores and engaging with customers. 
-      Capable of posting products, updating inventory status, and completing orders efficiently, all while 
-      extending empathic support via chat, email, and social media platforms.</p>
-    </section>
-
-    <section id="experience">
-      <h1>Experience</h1>
-      <ul>
-        <li>Customer Service Representative, Foundever (2025–2026)</li>
-        <li>Technology Engineer, Trends and Technologies Inc. (2024)</li>
-        <li>Credit and Documentation Specialist, Sto Nino De Cebu Resources (2023)</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h1>Projects</h1>
-      <p>Showcase your Shopify store setups, admin workflows, or design samples here.</p>
-    </section>
-
-    <section id="tools">
-      <h1>Tools</h1>
-      <p>CRM: Zendesk, Freshdesk, HubSpot, Salesforce, Zoho Desk<br>
-         Productivity: Google Workspace, MS Suite, Trello, Asana<br>
-         Design: Canva, Figma, Photoshop, Illustrator<br>
-         Ecommerce: Shopify, Amazon, eBay, Shopee, Lazada</p>
-    </section>
-
-    <section id="contact">
-      <h1>Contact</h1>
-      <p>📱 Mobile/WhatsApp: 09773550189<br>
-         📧 Email: jerichojakeguevara14@gmail.com<br>
-         🔗 LinkedIn: <a href="https://www.linkedin.com/in/jericho-jake-guevara-35a7651a4/" target="_blank">Profile</a><br>
-         📘 Facebook: <a href="https://www.facebook.com/jerichojake.26" target="_blank">Profile</a></p>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+<nav>
+  <div><b>JJG</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#tools">Tools</a>
+    <a href="#experience">Experience</a>
+    <a href="#services">Services</a>
+    <a href="#productivity">Productivity</a>
+    <a href="#contact">Contact</a>
   </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Jericho Jake Guevara</h1>
+    <div class="typing" id="typing"></div>
+  </div>
+
+  <!-- IMPORTANT: replace with your actual filename -->
+  <img src="assets/profile.jpg" alt="Profile">
+</section>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I’m Jericho Jake Guevara, a quick learner graduate with a degree in IT from Polytechnic University of the Philippines. Skilled in customer support, e-commerce, graphic design, admin works, and website management.
+  </p>
+
+  <h3 style="margin-top:20px;">What can you expect from me?</h3>
+  <ul>
+    <li>✅ 24/7 Online Support</li>
+    <li>✅ High Quality Work</li>
+    <li>✅ 100% Satisfaction</li>
+  </ul>
+
+  <!-- DOWNLOAD BUTTON -->
+  <a href="assets/CV.pdf" download class="btn">Download Resume</a>
+</section>
+
+<section id="tools" class="section">
+  <h2>Tools</h2>
+  <div class="cards">
+    <div class="card">Trello</div>
+    <div class="card">Asana</div>
+    <div class="card">Zendesk</div>
+    <div class="card">Gorgias</div>
+    <div class="card">Mailchimp</div>
+    <div class="card">Klaviyo</div>
+    <div class="card">Salesforce</div>
+    <div class="card">Google Workspace</div>
+    <div class="card">MS Office</div>
+    <div class="card">Slack</div>
+    <div class="card">Canva</div>
+    <div class="card">MS Teams</div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="cards">
+    <div class="card">Foundever Philippines (2025–2026)</div>
+    <div class="card">Trends and Technologies Inc (2024)</div>
+    <div class="card">SNRDC (2023)</div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <h2>Services</h2>
+  <div class="cards">
+    <div class="card">Customer Support</div>
+    <div class="card">Administrative Works</div>
+    <div class="card">Graphic Design</div>
+    <div class="card">Website Management</div>
+    <div class="card">Data Entry</div>
+    <div class="card">Shopify</div>
+    <div class="card">Email Marketing</div>
+    <div class="card">Content Writing</div>
+    <div class="card">Project Management</div>
+  </div>
+</section>
+
+<section id="productivity" class="section">
+  <h2>My Works</h2>
+
+  <div class="cards">
+    <!-- replace with your real images -->
+    <img src="assets/work1.jpg" class="card">
+    <img src="assets/work2.jpg" class="card">
+    <img src="assets/work3.jpg" class="card">
+  </div>
+
+  <div class="dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <form onsubmit="sendMessage(event)">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <p>Email: jerichojakeguevara14@gmail.com</p>
+  <p>Phone: +639773550189</p>
+</section>
+
+<footer>
+  <p>© 2026 Jericho Jake Guevara</p>
+  <div class="social">
+    <a href="https://facebook.com/jerichojake.26">Facebook</a>
+    <a href="https://linkedin.com/in/jericho-jake-guevara-35a7651a4/">LinkedIn</a>
+    <a href="https://t.me/jerichojake">Telegram</a>
+    <a href="https://wa.me/639773550189">WhatsApp</a>
+  </div>
+</footer>
+
+<script>
+/* TYPING EFFECT */
+const texts = [
+  "Customer Support Specialist",
+  "E-commerce Assistant",
+  "Graphic Designer",
+  "Virtual Assistant"
+];
+
+let i=0, j=0, current="", isDeleting=false;
+
+function type(){
+  current = texts[i];
+  
+  if(isDeleting){
+    document.getElementById("typing").textContent = current.substring(0,j--);
+  } else {
+    document.getElementById("typing").textContent = current.substring(0,j++);
+  }
+
+  if(!isDeleting && j === current.length){
+    isDeleting = true;
+    setTimeout(type,1000);
+    return;
+  }
+
+  if(isDeleting && j === 0){
+    isDeleting = false;
+    i = (i+1) % texts.length;
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+
+/* FORM */
+function sendMessage(e){
+  e.preventDefault();
+  alert("Message sent!");
+}
+</script>
+
 </body>
 </html>
